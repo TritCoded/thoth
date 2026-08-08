@@ -6,6 +6,9 @@ A fast scratchpad for drafting emails, LinkedIn messages, and more before you se
 
 Open it, write, close it. Nothing is ever written to disk.
 
+
+https://github.com/user-attachments/assets/5ce56db7-cb6d-4e77-b88a-7e6b505e802e
+
 ## Why
 
 Drafting directly in Gmail or LinkedIn's message box risks an accidental early send. Thoth is a separate, disposable space to get your wording right first, and copy the final version over when you're happy with it.
