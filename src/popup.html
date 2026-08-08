@@ -7,10 +7,16 @@
   </head>
   <body>
     <header id="bar">
-      <span id="title"
-        ><strong>Thoth</strong> // stress free message drafting</span
-      >
+      <span id="title"><strong>Thoth</strong> // worry free drafting</span>
       <div id="actions">
+        <button
+          id="settingsBtn"
+          class="btn iconBtn"
+          type="button"
+          aria-label="Settings"
+        >
+          ⚙
+        </button>
         <button
           id="copyBtn"
           class="btn"
@@ -30,12 +36,41 @@
       </div>
     </header>
 
+    <div id="tabs" role="tablist" aria-label="Drafts">
+      <button class="tab active" data-tab="1" role="tab" aria-selected="true">
+        1
+      </button>
+      <button class="tab" data-tab="2" role="tab" aria-selected="false">
+        2
+      </button>
+      <button class="tab" data-tab="3" role="tab" aria-selected="false">
+        3
+      </button>
+    </div>
+
     <div id="surface">
       <textarea
         id="note"
         placeholder="Write your story..."
         aria-label="Draft note"
       ></textarea>
+
+      <div id="settingsPanel" class="hidden">
+        <div class="settingsRow">
+          <span>Theme</span>
+          <div class="segmented" data-setting="theme">
+            <button data-value="dark" class="active">Dark</button>
+            <button data-value="light">Light</button>
+          </div>
+        </div>
+        <div class="settingsRow">
+          <span>Font</span>
+          <div class="segmented" data-setting="font">
+            <button data-value="sans" class="active">Sans</button>
+            <button data-value="mono">Mono</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer id="footer">
