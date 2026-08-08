@@ -48,7 +48,6 @@ async function copyNote() {
   try {
     await navigator.clipboard.writeText(textarea.value);
   } catch (err) {
-    // Fallback for the rare case the async Clipboard API is unavailable.
     textarea.select();
     document.execCommand("copy");
     textarea.setSelectionRange(textarea.value.length, textarea.value.length);
@@ -66,7 +65,6 @@ async function copyNote() {
 clearBtn.addEventListener("click", () => clearNote());
 copyBtn.addEventListener("click", copyNote);
 
-// Cmd/Ctrl+K as a fast keyboard wipe, in addition to the Clear button.
 textarea.addEventListener("keydown", (event) => {
   const isWipeShortcut =
     (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k";
