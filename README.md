@@ -1,11 +1,10 @@
-# Thoth 
+# Thoth
 
 <img width="48" height="48" alt="thoth-icon-128" src="https://github.com/user-attachments/assets/18006bc7-32af-41dc-89f9-5d9418c0e025" />
 
-A fast scratchpad for drafting emails, LinkedIn messages, and more before you send them. 
+A fast scratchpad for drafting emails, LinkedIn messages, and more before you send them.
 
 Open it, write, close it. Nothing is ever written to disk.
-
 
 https://github.com/user-attachments/assets/5ce56db7-cb6d-4e77-b88a-7e6b505e802e
 
@@ -47,11 +46,17 @@ To change the keyboard shortcut, go to `chrome://extensions/shortcuts`.
 Text is held in `chrome.storage.session`, which Chrome keeps in memory only and clears when the browser's underlying process fully terminates. On some systems, Chrome keeps running in the background after you close every window (e.g. macOS unless you `Cmd+Q`, or Windows with "Continue running background apps" enabled). In that case, the draft will still be there next time you open the pop-up, since the process never actually restarted.
 
 ## Found a bug, or want to request a feature?
- 
+
 Open an issue! There are templates for both:
- 
+
 - [🐛 Report a bug](https://github.com/TritCoded/thoth/issues/new?template=bug_report.yml)
 - [💡 Request a feature](https://github.com/TritCoded/thoth/issues/new?template=feature_request.yml)
+
+## Receive Updates
+
+Interested in using Thoth, but don't want to miss an update for a bug fix?
+
+Click `Watch` at the top of the page and select **All Activity** to receive updates about new commits!
 
 ## Project structure
 
