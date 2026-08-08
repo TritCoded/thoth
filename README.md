@@ -46,6 +46,13 @@ To change the keyboard shortcut, go to `chrome://extensions/shortcuts`.
 
 Text is held in `chrome.storage.session`, which Chrome keeps in memory only and clears when the browser's underlying process fully terminates. On some systems, Chrome keeps running in the background after you close every window (e.g. macOS unless you `Cmd+Q`, or Windows with "Continue running background apps" enabled). In that case, the draft will still be there next time you open the pop-up, since the process never actually restarted.
 
+## Found a bug, or want to request a feature?
+ 
+Open an issue! There are templates for both:
+ 
+- [🐛 Report a bug](https://github.com/TritCoded/thoth/issues/new?template=bug_report.yml)
+- [💡 Request a feature](https://github.com/TritCoded/thoth/issues/new?template=feature_request.yml)
+
 ## Project structure
 
 ```
