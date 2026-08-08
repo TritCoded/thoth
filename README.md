@@ -23,7 +23,7 @@ Drafting directly in Gmail or LinkedIn's message box risks an accidental early s
 
 ## Install
 
-This isn't published on the Chrome Web Store — install it as an unpacked extension:
+This isn't published on the Chrome Web Store, install it as an unpacked extension:
 
 1. Clone or download this repo
 2. Go to `chrome://extensions`
