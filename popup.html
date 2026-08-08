@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thoth</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header id="bar">
+      <span id="title"
+        ><strong>Thoth</strong> // stress free message drafting</span
+      >
+      <div id="actions">
+        <button
+          id="copyBtn"
+          class="btn"
+          type="button"
+          aria-label="Copy all text"
+        >
+          Copy
+        </button>
+        <button
+          id="clearBtn"
+          class="btn"
+          type="button"
+          aria-label="Clear the note immediately"
+        >
+          Clear
+        </button>
+      </div>
+    </header>
+
+    <div id="surface">
+      <textarea
+        id="note"
+        placeholder="Write your story..."
+        aria-label="Draft note"
+      ></textarea>
+    </div>
+
+    <footer id="footer">
+      <span id="count">0 chars</span>
+      <span><kbd>Ctrl</kbd> + <kbd>N</kbd> to reopen</span>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

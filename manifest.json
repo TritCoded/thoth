@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Thoth // Fast Scratchpad",
+  "version": "1.0",
+  "description": "A fast, non-saving scratchpad for drafting emails and messages before you send them.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Thoth (Alt+Shift+N)"
+  },
+  "permissions": ["storage"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+D",
+        "mac": "Alt+Shift+D"
+      },
+      "description": "Open Thoth"
+    }
+  },
+  "icons": {
+    "16": "icons/thoth-icon-16.png",
+    "48": "icons/thoth-icon-48.png",
+    "128": "icons/thoth-icon-128.png"
+  }
+}
