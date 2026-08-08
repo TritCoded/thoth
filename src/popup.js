@@ -1,13 +1,3 @@
-/**
- * Thoth popup logic.
- *
- * Storage strategy: chrome.storage.session is an in-memory store that
- * Chrome guarantees is never written to disk and is wiped automatically
- * when the browser process exits. That gives us exactly the behavior
- * requested — text survives an accidental popup refresh, but there is
- * no persistence across a real browser close, and nothing to clean up.
- */
-
 const STORAGE_KEY = "thoth_draft";
 
 const textarea = document.getElementById("note");
