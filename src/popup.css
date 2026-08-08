@@ -9,6 +9,24 @@
 
   --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
+
+  --popup-w: 420px;
+  --popup-h: 360px;
+  --note-font: var(--sans);
+}
+
+html[data-theme="light"] {
+  --border: #ffffff;
+  --text-box: #f3f3f1;
+  --ink: #1c1c1c;
+  --ink-soft: #767268;
+  --rule: #d8d5cd;
+  --accent: #a8712f;
+  --accent-soft: #efe6d6;
+}
+
+html[data-font="mono"] {
+  --note-font: var(--mono);
 }
 
 * {
@@ -22,8 +40,8 @@ body {
 }
 
 body {
-  width: 420px;
-  height: 360px;
+  width: var(--popup-w);
+  height: var(--popup-h);
   background: var(--border);
   color: var(--ink);
   font-family: var(--sans);
@@ -81,6 +99,18 @@ body {
   transform: translateY(1px);
 }
 
+.iconBtn {
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+.iconBtn.active,
+.iconBtn:hover {
+  border-color: var(--ink-soft);
+  color: var(--ink);
+  background: var(--accent-soft);
+}
+
 #clearBtn:hover {
   border-color: var(--accent);
   color: var(--accent);
@@ -98,6 +128,36 @@ body {
   color: var(--accent);
 }
 
+/* ---------- tabs ---------- */
+
+#tabs {
+  display: flex;
+  gap: 4px;
+  padding: 0 14px 8px;
+}
+
+.tab {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+  background: none;
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: var(--ink);
+}
+
+.tab.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* ---------- writing surface ---------- */
 
 #surface {
@@ -108,6 +168,7 @@ body {
   border-radius: 4px;
   padding: 2px;
   display: flex;
+  position: relative;
 }
 
 textarea {
@@ -117,7 +178,7 @@ textarea {
   outline: none;
   background: transparent;
   color: var(--ink);
-  font-family: var(--sans);
+  font-family: var(--note-font);
   font-size: 14px;
   line-height: 1.55;
   padding: 12px 13px;
@@ -126,6 +187,60 @@ textarea {
 textarea::placeholder {
   color: var(--ink-soft);
   opacity: 0.7;
+}
+
+/* ---------- settings panel ---------- */
+
+#settingsPanel {
+  position: absolute;
+  inset: 0;
+  background: var(--text-box);
+  border-radius: 3px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#settingsPanel.hidden {
+  display: none;
+}
+
+.settingsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+.segmented {
+  display: flex;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.segmented button {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.segmented button + button {
+  border-left: 1px solid var(--rule);
+}
+
+.segmented button.active {
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 /* ---------- footer ---------- */
